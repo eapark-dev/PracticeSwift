@@ -41,6 +41,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="a7j-Ry-XIP" secondAttribute="trailing" constant="10" id="mcA-Hl-NQf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LabelText" destination="a7j-Ry-XIP" id="pZj-8m-Vuk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

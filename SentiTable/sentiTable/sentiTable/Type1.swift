@@ -8,5 +8,8 @@
 import UIKit
 //아까 스토리보드에서 만든 Cell을 연결할 수 있다.
 class Type1 : UITableViewCell {
+    //label
+    @IBOutlet weak var LabelText: UILabel!
+    
     
 }
