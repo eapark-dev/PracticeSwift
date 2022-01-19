@@ -11,17 +11,29 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     @IBOutlet weak var TableViewMain: UITableView!
     
+    var newsData : Array<Dictionary<String, Any>>?
+    
     //1. http 통신 방법 -- url session
     //2. JSON 데이터 형태
+    //3. 테이블뷰의 데이터 매칭! <- 통보, 그리기
+    //background : network
     
     func getNews(){
-        let task = URLSession.shared.dataTask(with: URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=79d6e4fd785349419093bb946edf954f")!) { (data,response, error) in
+        let task = URLSession.shared.dataTask(with: URL(string: "https://newsapi.org/v2/top-headlines?country=kr&category=business&apiKey=79d6e4fd785349419093bb946edf954f")!) { (data,response, error) in
             if let dataJson = data {
  
                 //json parsing
                 do{
-                    let json = try JSONSerialization.jsonObject(with: dataJson, options: [])
-                    print(json)
+                    let json = try JSONSerialization.jsonObject(with: dataJson, options: []) as! Dictionary<String, Any> //형태가 뭔 지 모를 때 사용함 Any
+                    
+                    let articles = json["articles"] as! Array<Dictionary<String, Any>>
+                    self.newsData = articles
+                    
+                    DispatchQueue.main.async {
+                        self.TableViewMain.reloadData() // Main
+                    } //main에서 일을 해라
+                    
+      
                 }
                 catch{}
             }
@@ -34,7 +46,13 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     //2. 데이터 몇 개 인지?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //숫자로 반환
-        return 10
+        
+        if let news = newsData{
+            return news.count
+        }else {
+            return 0
+        }
+        
     }
     
     //1. 데이터 무엇인 지?
@@ -47,13 +65,29 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         //부모 자식 친자 확인
         let cell = TableViewMain.dequeueReusableCell(withIdentifier: "Type1", for: indexPath) as! Type1
         //cell.textLabel?.text = "\(indexPath.row)"
-        cell.LabelText.text = "\(indexPath.row)"
+        
+        let idx = indexPath.row
+        if let news = newsData {
+            
+            let row = news[idx]
+            if let r = row as? Dictionary<String, Any>{
+                if let title = r["title"] as? String{
+                    cell.LabelText.text = title
+                }
+            }
+           
+        }
+        
         return cell
     }
-    //클릭 이벤트
+    //클릭 감지
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")
     }
+    
+    //1. 디테일 (상세) 화면 만들기
+    //2. 값을 보내기
+    //3. 화면 이동
 
     override func viewDidLoad() {
         super.viewDidLoad()

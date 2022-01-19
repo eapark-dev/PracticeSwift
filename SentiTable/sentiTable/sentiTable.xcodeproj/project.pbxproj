@@ -15,6 +15,7 @@
 		56431014279596CE00D3E8BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56431013279596CE00D3E8BE /* Assets.xcassets */; };
 		56431017279596CE00D3E8BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56431015279596CE00D3E8BE /* LaunchScreen.storyboard */; };
 		5643101F27959E6800D3E8BE /* Type1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643101E27959E6800D3E8BE /* Type1.swift */; };
+		564AE35027983A8200311148 /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564AE34F27983A8200311148 /* NewsDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		56431016279596CE00D3E8BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56431018279596CE00D3E8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5643101E27959E6800D3E8BE /* Type1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1.swift; sourceTree = "<group>"; };
+		564AE34F27983A8200311148 /* NewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				56431018279596CE00D3E8BE /* Info.plist */,
 				56431010279596CE00D3E8BE /* sentiTable.xcdatamodeld */,
 				5643101E27959E6800D3E8BE /* Type1.swift */,
+				564AE34F27983A8200311148 /* NewsDetailController.swift */,
 			);
 			path = sentiTable;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				5643100C279596CE00D3E8BE /* ViewController.swift in Sources */,
 				56431008279596CE00D3E8BE /* AppDelegate.swift in Sources */,
 				56431012279596CE00D3E8BE /* sentiTable.xcdatamodeld in Sources */,
+				564AE35027983A8200311148 /* NewsDetailController.swift in Sources */,
 				5643100A279596CE00D3E8BE /* SceneDelegate.swift in Sources */,
 				5643101F27959E6800D3E8BE /* Type1.swift in Sources */,
 			);
