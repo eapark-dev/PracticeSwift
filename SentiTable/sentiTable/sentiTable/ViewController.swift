@@ -90,7 +90,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         if let news = newsData {
             let row = news[indexPath.row]
             if let r = row as? Dictionary<String, Any>{
-                
                 if let imageUrl = r["urlToImage"] as? String{
                     controller.imageUrl = imageUrl
                 }
