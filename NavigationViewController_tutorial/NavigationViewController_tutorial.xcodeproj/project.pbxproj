@@ -15,6 +15,7 @@
 		5629E304279FFAE80065BE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5629E303279FFAE80065BE1F /* Assets.xcassets */; };
 		5629E307279FFAE80065BE1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5629E305279FFAE80065BE1F /* LaunchScreen.storyboard */; };
 		5629E30F27A00D080065BE1F /* ReisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629E30E27A00D080065BE1F /* ReisterViewController.swift */; };
+		56CB4E0B27A55BA20062B356 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CB4E0A27A55BA20062B356 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5629E306279FFAE80065BE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5629E308279FFAE80065BE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5629E30E27A00D080065BE1F /* ReisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReisterViewController.swift; sourceTree = "<group>"; };
+		56CB4E0A27A55BA20062B356 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				5629E30E27A00D080065BE1F /* ReisterViewController.swift */,
 				5629E2FB279FFAE80065BE1F /* LoginViewController.swift */,
+				56CB4E0A27A55BA20062B356 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				5629E30F27A00D080065BE1F /* ReisterViewController.swift in Sources */,
 				5629E302279FFAE80065BE1F /* NavigationViewController_tutorial.xcdatamodeld in Sources */,
 				5629E2FC279FFAE80065BE1F /* LoginViewController.swift in Sources */,
+				56CB4E0B27A55BA20062B356 /* MainViewController.swift in Sources */,
 				5629E2F8279FFAE80065BE1F /* AppDelegate.swift in Sources */,
 				5629E2FA279FFAE80065BE1F /* SceneDelegate.swift in Sources */,
 			);

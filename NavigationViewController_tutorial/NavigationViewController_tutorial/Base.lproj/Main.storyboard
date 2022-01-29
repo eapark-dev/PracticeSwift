@@ -94,6 +94,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Acz-wt-7sv"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="3aC-u8-eQV" id="QbK-yp-A7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
