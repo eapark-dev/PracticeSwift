@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "8689048d724110390db7c2bd007cb463dd40cfc9f8ae31d3b3d3a99bd3b7c1363aae672b404b0376561a2f4adb89798eb498af677296f4c50e2feb83d4b46b936a4c3500a33a72a4224a503a027c0dbf.jpeg",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
