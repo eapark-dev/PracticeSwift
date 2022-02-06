@@ -8,16 +8,15 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, PopUpDelegate {
+
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var createPopUpBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
     @IBAction func onCreatePopUpBtnClicked(_ sender: UIButton) {
         print("ViewController - onCreatePopUpBtnClicked() called")
         
@@ -37,7 +36,16 @@ class ViewController: UIViewController {
             self.myWebView.load(URLRequest(url: myChannelUrl!))
         }
         
+        customPopUpVC.myPopUpDelegate = self
+        
         self.present(customPopUpVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - PopUpDelegate methods
+    func onOpenChatBtnClicked() {
+        print("ViewController - onOpenChatBtnClicked() called")
+        let myChannelUrl = URL(string: "https://www.youtube.com/channel/UCpK0ae9lWdtyDi9Cdc1Fqeg")
+        self.myWebView.load(URLRequest(url: myChannelUrl!))
     }
 }
 

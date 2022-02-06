@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anK-43-12i" userLabel="contentView">
-                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_image" translatesAutoresizingMaskIntoConstraints="NO" id="vNx-Cg-MAH">
                                         <rect key="frame" x="65" y="20" width="120" height="120"/>
@@ -39,40 +39,67 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요! 박은아 입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKa-eP-DgN">
-                                        <rect key="frame" x="34.5" y="159" width="181" height="21"/>
+                                        <rect key="frame" x="35" y="159" width="180.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구독 좋아요! 부탁드립니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAO-zm-er2">
-                                        <rect key="frame" x="34.5" y="188" width="181" height="21"/>
+                                        <rect key="frame" x="35" y="187.5" width="180.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-0y-DaL">
-                                        <rect key="frame" x="53" y="227" width="145" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="XfC-NW-uZj"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="구독하러 가기!">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="onSubscribeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ASe-qf-c9R"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kxv-aD-3jb">
+                                        <rect key="frame" x="65" y="298" width="120" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqj-bq-TU2">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="0M4-2s-Qg7"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="오픈카톡방 가기">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onOpenChatBtnClicked:" destination="cyI-8N-esH" eventType="touchUpInside" id="Bvq-au-s0O"/>
+                                                    <action selector="onOpenChatBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mDC-Y6-ueF"/>
+                                                    <action selector="onSubscribeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mnw-CB-l5H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4A-0y-DaL">
+                                                <rect key="frame" x="0.0" y="42" width="120" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="XfC-NW-uZj"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="구독하러 가기!">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onOpenChatBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pIv-lu-Wwu"/>
+                                                    <action selector="onSubscribeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ASe-qf-c9R"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="JKa-lZ-Yk4"/>
+                                    <constraint firstAttribute="height" constant="400" id="JKa-lZ-Yk4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kxv-aD-3jb" secondAttribute="bottom" constant="28" id="Jmc-yD-sqW"/>
                                     <constraint firstItem="uKa-eP-DgN" firstAttribute="centerX" secondItem="anK-43-12i" secondAttribute="centerX" id="K3m-Fk-gcG"/>
                                     <constraint firstItem="FAO-zm-er2" firstAttribute="centerX" secondItem="anK-43-12i" secondAttribute="centerX" id="UiH-y3-i6C"/>
+                                    <constraint firstItem="Kxv-aD-3jb" firstAttribute="centerX" secondItem="anK-43-12i" secondAttribute="centerX" id="awX-bR-cb9"/>
                                     <constraint firstAttribute="width" constant="250" id="cnt-zg-yMF"/>
                                     <constraint firstItem="vNx-Cg-MAH" firstAttribute="top" secondItem="anK-43-12i" secondAttribute="top" constant="20" id="dFs-bs-Tnu"/>
                                     <constraint firstItem="vNx-Cg-MAH" firstAttribute="centerX" secondItem="anK-43-12i" secondAttribute="centerX" id="k9r-YJ-wKM"/>
@@ -95,10 +122,12 @@
                     <connections>
                         <outlet property="bgBtn" destination="8zN-i6-Xyt" id="m7a-CA-0P8"/>
                         <outlet property="contentView" destination="anK-43-12i" id="NJs-rD-Pxx"/>
+                        <outlet property="openChatBtn" destination="Sqj-bq-TU2" id="pWZ-a5-poT"/>
                         <outlet property="subscribeBtn" destination="d4A-0y-DaL" id="O9L-c7-gsq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cyI-8N-esH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
@@ -107,6 +136,9 @@
         <image name="my_image" width="137" height="213"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

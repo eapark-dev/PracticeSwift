@@ -17,6 +17,7 @@
 		568CA6F327AE9AC2004F35AE /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568CA6F227AE9AC2004F35AE /* PopUp.storyboard */; };
 		568CA6F527AE9D95004F35AE /* CustomPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA6F427AE9D95004F35AE /* CustomPopUpViewController.swift */; };
 		568CA6F827AE9FE1004F35AE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568CA6F727AE9FE1004F35AE /* WebKit.framework */; };
+		568CA6FA27AFCE64004F35AE /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA6F927AFCE64004F35AE /* PopUpDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		568CA6F227AE9AC2004F35AE /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		568CA6F427AE9D95004F35AE /* CustomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpViewController.swift; sourceTree = "<group>"; };
 		568CA6F727AE9FE1004F35AE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		568CA6F927AFCE64004F35AE /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				568CA6D927AE99EC004F35AE /* AppDelegate.swift */,
+				568CA6F927AFCE64004F35AE /* PopUpDelegate.swift */,
 				568CA6DB27AE99EC004F35AE /* SceneDelegate.swift */,
 				568CA6DD27AE99EC004F35AE /* ViewController.swift */,
 				568CA6F427AE9D95004F35AE /* CustomPopUpViewController.swift */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				568CA6DE27AE99EC004F35AE /* ViewController.swift in Sources */,
+				568CA6FA27AFCE64004F35AE /* PopUpDelegate.swift in Sources */,
 				568CA6E427AE99EC004F35AE /* CustomPopUp_tutorial.xcdatamodeld in Sources */,
 				568CA6DA27AE99EC004F35AE /* AppDelegate.swift in Sources */,
 				568CA6DC27AE99EC004F35AE /* SceneDelegate.swift in Sources */,
