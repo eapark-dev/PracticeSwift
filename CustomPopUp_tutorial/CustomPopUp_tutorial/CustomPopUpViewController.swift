@@ -12,7 +12,11 @@ class CustomPopUpViewController : UIViewController {
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var subscribeBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var openChatBtn: UIButton!
+    
+    @IBOutlet weak var onBlogBtn: UIButton!
+    
     var subscribeBtnCompletionClosure: (() -> Void)?
     
     var myPopUpDelegate : PopUpDelegate?
@@ -25,6 +29,7 @@ class CustomPopUpViewController : UIViewController {
         contentView.layer.cornerRadius = 30
         subscribeBtn.layer.cornerRadius = 10
         openChatBtn.layer.cornerRadius = 10
+        onBlogBtn.layer.cornerRadius = 10
     }
     
     //MARK: - IBActions
@@ -45,6 +50,14 @@ class CustomPopUpViewController : UIViewController {
             subscribeBtnCompletionClosure()
         }
         
+    }
+    
+    @IBAction func onBlogBtnClicked(_ sender: UIButton) {
+        print("CustomPopUpViewController - onBlogBtnClicked() called")
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onOpenChatBtnClicked(_ sender: UIButton) {
