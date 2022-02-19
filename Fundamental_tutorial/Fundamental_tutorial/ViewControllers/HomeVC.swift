@@ -123,7 +123,7 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
                 print("키보드가 버튼을 덮었다.")
                 let distance = keyboardSize.height - searchButton.frame.origin.y
                 print("이만큼 덮었다. distance: \(distance)")
-                self.view.frame.origin.y = distance + searchButton.frame.height
+                self.view.frame.origin.y -= searchButton.frame.height
             }
         }
 
