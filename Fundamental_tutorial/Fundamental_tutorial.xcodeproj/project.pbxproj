@@ -12,6 +12,10 @@
 		56852BEF27BFC62F0076EBBE /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BEE27BFC62F0076EBBE /* PhotoCollectionVC.swift */; };
 		56852BF327BFE21C0076EBBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BF227BFE21C0076EBBE /* Constants.swift */; };
 		56852BF527BFE3B70076EBBE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BF427BFE3B70076EBBE /* BaseVC.swift */; };
+		56852BF827C260070076EBBE /* MyAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BF727C260070076EBBE /* MyAlamofireManager.swift */; };
+		56852BFA27C260F50076EBBE /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BF927C260F50076EBBE /* BaseInterceptor.swift */; };
+		56852BFC27C264140076EBBE /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BFB27C264140076EBBE /* MyLogger.swift */; };
+		56852BFE27C265080076EBBE /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BFD27C265080076EBBE /* MyApiStatusLogger.swift */; };
 		568CA75727BA82A0004F35AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA75627BA82A0004F35AE /* AppDelegate.swift */; };
 		568CA75927BA82A0004F35AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA75827BA82A0004F35AE /* SceneDelegate.swift */; };
 		568CA75B27BA82A0004F35AE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA75A27BA82A0004F35AE /* HomeVC.swift */; };
@@ -28,6 +32,10 @@
 		56852BEE27BFC62F0076EBBE /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
 		56852BF227BFE21C0076EBBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		56852BF427BFE3B70076EBBE /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		56852BF727C260070076EBBE /* MyAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlamofireManager.swift; sourceTree = "<group>"; };
+		56852BF927C260F50076EBBE /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
+		56852BFB27C264140076EBBE /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
+		56852BFD27C265080076EBBE /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
 		568CA75327BA82A0004F35AE /* Fundamental_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fundamental_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568CA75627BA82A0004F35AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568CA75827BA82A0004F35AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,17 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		56852BF627C25FE80076EBBE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				56852BF727C260070076EBBE /* MyAlamofireManager.swift */,
+				56852BF927C260F50076EBBE /* BaseInterceptor.swift */,
+				56852BFB27C264140076EBBE /* MyLogger.swift */,
+				56852BFD27C265080076EBBE /* MyApiStatusLogger.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		568CA74A27BA82A0004F35AE = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +111,7 @@
 		568CA75527BA82A0004F35AE /* Fundamental_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				56852BF627C25FE80076EBBE /* API */,
 				56852BF127BFE2020076EBBE /* Utils */,
 				568CA76227BA82A0004F35AE /* Assets.xcassets */,
 				568CA75627BA82A0004F35AE /* AppDelegate.swift */,
@@ -243,7 +263,11 @@
 				56852BF527BFE3B70076EBBE /* BaseVC.swift in Sources */,
 				56852BED27BFC5E70076EBBE /* UserListVC.swift in Sources */,
 				56852BF327BFE21C0076EBBE /* Constants.swift in Sources */,
+				56852BF827C260070076EBBE /* MyAlamofireManager.swift in Sources */,
+				56852BFC27C264140076EBBE /* MyLogger.swift in Sources */,
+				56852BFA27C260F50076EBBE /* BaseInterceptor.swift in Sources */,
 				568CA75727BA82A0004F35AE /* AppDelegate.swift in Sources */,
+				56852BFE27C265080076EBBE /* MyApiStatusLogger.swift in Sources */,
 				568CA75927BA82A0004F35AE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

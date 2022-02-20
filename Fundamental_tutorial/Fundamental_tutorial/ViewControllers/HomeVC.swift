@@ -7,6 +7,7 @@
 
 import UIKit
 import Toast_Swift
+import Alamofire
 
 class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate {
 
@@ -136,9 +137,26 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
     }
     
     //MARK: - IBAction methods
+    //검색 버튼이 클릭 되었을 때
     @IBAction func onSearchButtonClicked(_ sender: UIButton) {
         print("HomeVC - onSearchButtonClicked() called / selectedIndex : \(searchFilterSegment.selectedSegmentIndex)")
         
+//        AF.request("https://api.unsplash.com/search/photos").response { response in
+//            debugPrint(response)
+//        }
+        let url = API.BASE_URL + "search/photos"
+        
+        guard let userInput = self.searchBar.text else {return}
+        //key, value 형식
+        let queryParam = ["query": userInput,"client_id":API.CLIENT_ID]
+//        AF.request(url,method: .get, parameters: queryParam).responseJSON(completionHandler: {response in debugPrint(response)})
+        
+        MyAlamofireManager
+            .shared
+            .session
+            .request(url).responseJSON(completionHandler: {
+                response in debugPrint(response)
+            })
         //화면으로 이동
         pushVC()
     }
