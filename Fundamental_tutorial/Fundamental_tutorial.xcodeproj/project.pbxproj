@@ -16,6 +16,7 @@
 		56852BFA27C260F50076EBBE /* BaseInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BF927C260F50076EBBE /* BaseInterceptor.swift */; };
 		56852BFC27C264140076EBBE /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BFB27C264140076EBBE /* MyLogger.swift */; };
 		56852BFE27C265080076EBBE /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BFD27C265080076EBBE /* MyApiStatusLogger.swift */; };
+		56852C0027C3B7A70076EBBE /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56852BFF27C3B7A70076EBBE /* MySearchRouter.swift */; };
 		568CA75727BA82A0004F35AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA75627BA82A0004F35AE /* AppDelegate.swift */; };
 		568CA75927BA82A0004F35AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA75827BA82A0004F35AE /* SceneDelegate.swift */; };
 		568CA75B27BA82A0004F35AE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568CA75A27BA82A0004F35AE /* HomeVC.swift */; };
@@ -36,6 +37,7 @@
 		56852BF927C260F50076EBBE /* BaseInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterceptor.swift; sourceTree = "<group>"; };
 		56852BFB27C264140076EBBE /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
 		56852BFD27C265080076EBBE /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
+		56852BFF27C3B7A70076EBBE /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
 		568CA75327BA82A0004F35AE /* Fundamental_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fundamental_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568CA75627BA82A0004F35AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568CA75827BA82A0004F35AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				56852BF927C260F50076EBBE /* BaseInterceptor.swift */,
 				56852BFB27C264140076EBBE /* MyLogger.swift */,
 				56852BFD27C265080076EBBE /* MyApiStatusLogger.swift */,
+				56852BFF27C3B7A70076EBBE /* MySearchRouter.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				56852BEF27BFC62F0076EBBE /* PhotoCollectionVC.swift in Sources */,
 				568CA76127BA82A0004F35AE /* Fundamental_tutorial.xcdatamodeld in Sources */,
 				56852BF527BFE3B70076EBBE /* BaseVC.swift in Sources */,
+				56852C0027C3B7A70076EBBE /* MySearchRouter.swift in Sources */,
 				56852BED27BFC5E70076EBBE /* UserListVC.swift in Sources */,
 				56852BF327BFE21C0076EBBE /* Constants.swift in Sources */,
 				56852BF827C260070076EBBE /* MyAlamofireManager.swift in Sources */,

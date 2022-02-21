@@ -9,7 +9,7 @@ import UIKit
 import Toast_Swift
 import Alamofire
 
-class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate {
+class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var searchFilterSegment: UISegmentedControl!
     
@@ -144,19 +144,34 @@ class HomeVC: UIViewController, UISearchBarDelegate, UIGestureRecognizerDelegate
 //        AF.request("https://api.unsplash.com/search/photos").response { response in
 //            debugPrint(response)
 //        }
-        let url = API.BASE_URL + "search/photos"
-        
+//        let url = API.BASE_URL + "search/photos"
+//
         guard let userInput = self.searchBar.text else {return}
         //key, value 형식
-        let queryParam = ["query": userInput,"client_id":API.CLIENT_ID]
+//        let queryParam = ["query": userInput,"client_id":API.CLIENT_ID]
 //        AF.request(url,method: .get, parameters: queryParam).responseJSON(completionHandler: {response in debugPrint(response)})
         
-        MyAlamofireManager
-            .shared
-            .session
-            .request(url).responseJSON(completionHandler: {
-                response in debugPrint(response)
-            })
+        var urlToCall : URLRequestConvertible?
+        
+        switch searchFilterSegment.selectedSegmentIndex {
+        case 0 :
+            urlToCall = MySearchRouter.searchPhotos(term: userInput)
+        case 1 :
+            urlToCall = MySearchRouter.searchUsers(term: userInput)
+        default :
+            print("default")
+        }
+        
+        if let urlConvertible = urlToCall {
+            MyAlamofireManager
+                        .shared
+                        .session
+                        .request(urlConvertible)
+                        .validate(statusCode: 200..<401) //200~401아래까지만 허용
+                        .responseJSON(completionHandler: { response in
+                            debugPrint(response)
+                        })
+        }
         //화면으로 이동
         pushVC()
     }
