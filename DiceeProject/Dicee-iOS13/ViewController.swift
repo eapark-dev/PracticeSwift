@@ -12,36 +12,20 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
-    
-    //주사위 숫자 초기화
-    var leftDiceNumber = 1
-    var rightDiceNumber = 5
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+        
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        //Int.random(숫자..숫자) -> 랜덤으로 해당 범위에서 숫자 가져오기
         print("call rollButtonPressed")
+        
+        let diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
+        
         //대괄호 컬렉션을 보유하는 데 사용
-        diceImageView1.image =  [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")][leftDiceNumber]
+        diceImageView1.image =  diceArray[Int.random(in: 1...5)]
         
-        diceImageView2.image =  [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")][rightDiceNumber]
+        diceImageView2.image =  diceArray[Int.random(in: 1...5)]
         
+       
         
-        
-        leftDiceNumber = leftDiceNumber + 1
-        rightDiceNumber = rightDiceNumber - 1
-        
-        if leftDiceNumber == 5
-        {
-            leftDiceNumber = 0
-        }
-        
-        if rightDiceNumber == 1
-        {
-            rightDiceNumber = 5
-        }
     }
     
 }
