@@ -20,9 +20,9 @@ class ViewController: UIViewController {
         let diceArray = [#imageLiteral(resourceName: "DiceOne"),#imageLiteral(resourceName: "DiceTwo"),#imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"),#imageLiteral(resourceName: "DiceFive"),#imageLiteral(resourceName: "DiceSix")]
         
         //대괄호 컬렉션을 보유하는 데 사용
-        diceImageView1.image =  diceArray[Int.random(in: 1...5)]
+        diceImageView1.image =  diceArray[Int.random(in: 0...5)]
         
-        diceImageView2.image =  diceArray[Int.random(in: 1...5)]
+        diceImageView2.image =  diceArray[Int.random(in: 0...5)]
         
        
         
