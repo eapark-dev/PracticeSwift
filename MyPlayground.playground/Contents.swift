@@ -1,14 +1,68 @@
-import UIKit
+//Don't change this code:
+func calculator() {
+  let a = 3 //example first input
+  let b = 4 //example second input
+  
+  add(n1: a, n2: b)
+  subtract(n1: a, n2: b)
+  multiply(n1: a, n2: b)
+  divide(n1: a, n2: b)
+  
+}
 
-var greeting = "Hello, playground"
+//Write your code below this line to make the above function calls work.
+//Write your code below this line to make the above function calls work.
+func add(n1 : Int , n2 : Int){
+    print(n1+n2)
+}
 
-//알파벳 여섯자리 랜덤함수
+func subtract(n1 : Int , n2 : Int){
+    print(n1-n2)
+}
 
-let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+func multiply(n1 : Int , n2 : Int){
+    print(n1*n2)
+}
 
-//The number of letters in alphabet equals 26
-//
-let password = alphabet.shuffled().prefix(6).joined()
+func divide(n1 : Int , n2 : Int){
+    print(Double(n1)/Double(n2))
+}
 
 
-print(password)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Don't move or change this code:
+calculator()
