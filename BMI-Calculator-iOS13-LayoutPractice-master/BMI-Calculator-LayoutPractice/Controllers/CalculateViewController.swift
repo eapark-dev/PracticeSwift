@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
 
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
+    
+    var bmi = "0.0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +37,18 @@ class ViewController: UIViewController {
         let weight = weightSlider.value
         
         //제곱 계산 함수 pow
-        let bmi = weight/(height*height)
-        print(bmi)
+        bmi = String(format:"%.1f",weight/(height*height))
+
+        self.performSegue(withIdentifier: "goToResult", sender: self)
         
+    }
+    
+    //segue 초기화
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController //as! 다운 캐스트
+            destinationVC.bmiValue = bmi
+        }
     }
     
 }
