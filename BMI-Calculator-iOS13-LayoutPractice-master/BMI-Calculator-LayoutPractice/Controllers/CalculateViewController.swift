@@ -10,15 +10,16 @@ import UIKit
 
 class CalculateViewController: UIViewController {
 
+    var calculatorBrain = CalculatorBrain()
+    
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
     
-    var bmi = "0.0"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        calculatorBrain.getBMIBValue()
         // Do any additional setup after loading the view.
     }
     
@@ -36,9 +37,7 @@ class CalculateViewController: UIViewController {
         let height = heightSlider.value
         let weight = weightSlider.value
         
-        //제곱 계산 함수 pow
-        bmi = String(format:"%.1f",weight/(height*height))
-
+        calculatorBrain.calculateBMI(height: height, weight: weight)
         self.performSegue(withIdentifier: "goToResult", sender: self)
         
     }
@@ -47,7 +46,9 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController //as! 다운 캐스트
-            destinationVC.bmiValue = bmi
+            destinationVC.bmiValue = calculatorBrain.getBMIBValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
     
