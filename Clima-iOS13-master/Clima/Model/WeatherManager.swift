@@ -11,7 +11,7 @@ import Foundation
 struct WeatherManager {
     
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=4dd0299c7c6c699320733a04ae7d68ec&units=metric"
-
+    
     func fetchWeather(cityName : String){
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(urlString: urlString)
@@ -28,7 +28,16 @@ struct WeatherManager {
             //3. Give the session a task
             
             //completionHandler :
-            let task = session.dataTask(with: url, completionHandler: handle(data: response: error: ))
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    self.parseJSON(weatherData: safeData)
+                }
+            }
             
             //4. Start the task
             task.resume()
@@ -36,18 +45,14 @@ struct WeatherManager {
         }
     }
     
-    
-    //Closures 함수 : 본질적으로 익명의 함수 또는 이름이 없는 함수를 의미, 독립적
-    func handle(data:Data?, response : URLResponse?, error:Error?){
-        if error != nil {
-            print(error!)
-            return
-        }
-        
-        if let safeData = data {
-            let dataString = String(data:safeData, encoding: .utf8)
-            print(dataString)
+    func parseJSON(weatherData : Data){
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
+            print(decodedData.weather[0].description)
+        }catch {
+            print(error)
         }
     }
-
+    
 }
