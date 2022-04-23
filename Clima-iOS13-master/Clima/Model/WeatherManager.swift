@@ -8,16 +8,23 @@
 
 import Foundation
 
+protocol WeatherManagerDelegate{
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error:Error)
+}
+
 struct WeatherManager {
-    
+
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=4dd0299c7c6c699320733a04ae7d68ec&units=metric"
+    
+    var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName : String){
         let urlString = "\(weatherURL)&q=\(cityName)"
-        performRequest(urlString: urlString)
+        performRequest(with : urlString)
     }
     
-    func performRequest(urlString : String){
+    func performRequest(with urlString : String){
         //1. URL 만들기
         
         if let url = URL(string: urlString) {
@@ -30,12 +37,15 @@ struct WeatherManager {
             //completionHandler :
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
+                    self.delegate?.didFailWithError(error: error!)
                     print(error!)
                     return
                 }
                 
                 if let safeData = data {
-                    self.parseJSON(weatherData: safeData)
+                    if let weather = self.parseJSON(weatherData: safeData){
+                        self.delegate?.didUpdateWeather(self, weather: weather)
+                    }
                 }
             }
             
@@ -45,7 +55,7 @@ struct WeatherManager {
         }
     }
     
-    func parseJSON(weatherData : Data){
+    func parseJSON(weatherData : Data) -> WeatherModel?{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
@@ -54,13 +64,11 @@ struct WeatherManager {
             let name = decodedData.name
             
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+            return weather
             
-            print(weather.temperatureString)
         }catch {
-            print(error)
+            delegate?.didFailWithError(error: error)
+            return nil
         }
     }
-    
-    
-    
 }
