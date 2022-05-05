@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
-    
-    @IBAction func registerPressed(_ sender: UIButton) {
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if #available(iOS 12.0, *) {
+            self.passwordTextfield.textContentType = .oneTimeCode
+        }
     }
-    
+
+    @IBAction func registerPressed(_ sender: UIButton) {
+        
+        if let email = emailTextfield.text, let password = passwordTextfield.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    //ChatViewController 이동
+                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                }
+            }
+        }
+    }
+
 }
+
