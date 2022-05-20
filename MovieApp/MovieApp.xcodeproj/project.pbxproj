@@ -15,6 +15,7 @@
 		569B9C9C2830A3BF00D67F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B9C9B2830A3BF00D67F76 /* Assets.xcassets */; };
 		569B9C9F2830A3BF00D67F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569B9C9D2830A3BF00D67F76 /* LaunchScreen.storyboard */; };
 		569B9CA72830DFA600D67F76 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9CA62830DFA600D67F76 /* MovieCell.swift */; };
+		569B9CA92836699B00D67F76 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9CA82836699B00D67F76 /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		569B9C9E2830A3BF00D67F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		569B9CA02830A3BF00D67F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569B9CA62830DFA600D67F76 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		569B9CA82836699B00D67F76 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				569B9C9D2830A3BF00D67F76 /* LaunchScreen.storyboard */,
 				569B9CA02830A3BF00D67F76 /* Info.plist */,
 				569B9C982830A3BF00D67F76 /* MovieApp.xcdatamodeld */,
+				569B9CA82836699B00D67F76 /* MovieModel.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569B9CA92836699B00D67F76 /* MovieModel.swift in Sources */,
 				569B9C942830A3BF00D67F76 /* ViewController.swift in Sources */,
 				569B9C902830A3BF00D67F76 /* AppDelegate.swift in Sources */,
 				569B9C9A2830A3BF00D67F76 /* MovieApp.xcdatamodeld in Sources */,
