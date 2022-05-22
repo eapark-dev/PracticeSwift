@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     var movieModel: MovieModel?
@@ -100,6 +101,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return self.movieModel?.results.count ?? 0
     }
     
+    //테이블 셀을 선택했을 때 ->클릭 이벤트
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        
+        detailVC.movieResult = self.movieModel?.results[indexPath.row]
+        
+        //화면 꽉차게 하는 경우 사용 (이럴땐 꼭 버튼으로 닫기 추가해야함)
+        //detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true){
+
+        }
+    }
+    
     //사이즈 규격화
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
@@ -124,6 +138,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
                 
             }
         }
+        
+        //iOS8601DateFormat - 기본 포맷
+        if let dateString = self.movieModel?.results[indexPath.row].releaseDate {
+            let formatter = ISO8601DateFormatter()
+            if let isoDate = formatter.date(from: dateString) {
+                
+                let myFormatter = DateFormatter()
+                myFormatter.dateFormat = "yyyy-MM-dd"
+                let dateString = myFormatter.string(from: isoDate)
+                
+                cell.dateLabel.text = dateString
+            }
+        }
+        
+
+        
         return cell
     }
     
