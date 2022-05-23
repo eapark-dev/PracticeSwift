@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var movieTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var term = ""
+    var api = API()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,58 +29,31 @@ class ViewController: UIViewController {
         requestMovieApi()
     }
 
-    //네트워크 주소로 url 가져오기
+    //api 따로 빼서 사용했을 때
     func loadImage(urlString: String, completion: @escaping (UIImage?) -> Void){
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
-        
-        if let hasURL = URL(string: urlString) {
-            var request = URLRequest(url: hasURL)
-            request.httpMethod = "GET"
+        api.request(type: .Url(urlString: urlString)) { data, response, error in
             
-            session.dataTask(with: request){ data, response, error in
-               //print((response as! HTTPURLResponse).statusCode)
+            if let hasData = data {
+                completion(UIImage(data: hasData))
+                return
+            }
             
-                if let hasData = data {
-                    completion(UIImage(data: hasData))
-                    return
-                }
-            }.resume()
-            session.finishTasksAndInvalidate()
+            completion(nil)
         }
-        
-        completion(nil)
-
     }
-
-    // api 통신 방법
+    
     func requestMovieApi(){
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
         
-        var components = URLComponents(string: "https://itunes.apple.com/search")
-        
-        let term = URLQueryItem(name:"term",value: "marvel")
+        let term = URLQueryItem(name:"term",value: term)
         let media = URLQueryItem(name:"media",value: "movie")
         let country = URLQueryItem(name:"country",value: "KR")
         
-        components?.queryItems = [term,media,country]
+        let querys = [term, media, country]
         
-        //quard옵션 : url을 가져올 수 없으면 끝낸다.
-        guard let url = components?.url else {
-            return
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let task = session.dataTask(with: request){ data, response, error in
-          // print((response as! HTTPURLResponse).statusCode)
-            
+        api.request(type: .search(querys: querys)) { data, response, error in
             if let hasData = data{
                 do{
                     self.movieModel =  try JSONDecoder().decode(MovieModel.self, from: hasData)
-                    print(self.movieModel ?? "no data")
                     //다시 불러온다.
                     //메인 스레드에서 불러와야함
                     DispatchQueue.main.async {
@@ -89,12 +65,81 @@ class ViewController: UIViewController {
                 
             }
         }
-        
-        task.resume()
-        session.finishTasksAndInvalidate()
-        
     }
 }
+    
+//한곳에서 불러온 api
+    
+    //네트워크 주소로 url 가져오기
+//    func loadImage(urlString: String, completion: @escaping (UIImage?) -> Void){
+//        let sessionConfig = URLSessionConfiguration.default
+//        let session = URLSession(configuration: sessionConfig)
+//
+//        if let hasURL = URL(string: urlString) {
+//            var request = URLRequest(url: hasURL)
+//            request.httpMethod = "GET"
+//
+//            session.dataTask(with: request){ data, response, error in
+//               //print((response as! HTTPURLResponse).statusCode)
+//
+//                if let hasData = data {
+//                    completion(UIImage(data: hasData))
+//                    return
+//                }
+//            }.resume()
+//            session.finishTasksAndInvalidate()
+//        }
+//
+//        completion(nil)
+//
+//    }
+
+    // api 통신 방법
+//    func requestMovieApi(){
+//        let sessionConfig = URLSessionConfiguration.default
+//        let session = URLSession(configuration: sessionConfig)
+//
+//        var components = URLComponents(string: "https://itunes.apple.com/search")
+//
+//        let term = URLQueryItem(name:"term",value: "marvel")
+//        let media = URLQueryItem(name:"media",value: "movie")
+//        let country = URLQueryItem(name:"country",value: "KR")
+//
+//        components?.queryItems = [term,media,country]
+//
+//        //quard옵션 : url을 가져올 수 없으면 끝낸다.
+//        guard let url = components?.url else {
+//            return
+//        }
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//
+//        let task = session.dataTask(with: request){ data, response, error in
+//          // print((response as! HTTPURLResponse).statusCode)
+//
+//            if let hasData = data{
+//                do{
+//                    self.movieModel =  try JSONDecoder().decode(MovieModel.self, from: hasData)
+//                    print(self.movieModel ?? "no data")
+//                    //다시 불러온다.
+//                    //메인 스레드에서 불러와야함
+//                    DispatchQueue.main.async {
+//                        self.movieTableView.reloadData()
+//                    }
+//                }catch{
+//                    print(error)
+//                }
+//
+//            }
+//        }
+//
+//        task.resume()
+//        session.finishTasksAndInvalidate()
+//
+//    }
+//}
+
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -162,6 +207,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension ViewController:UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let hasText = searchBar.text else{
+            return
+        }
+        term = hasText
         
+        requestMovieApi()
+        //키보드 내리기
+        self.view.endEditing(true)
     }
 }
+
