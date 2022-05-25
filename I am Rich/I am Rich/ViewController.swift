@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  I am Rich
+//  I Am Rich
 //
-//  Created by 박은아 on 2022/03/13.
+//  Created by 박은아 on 2022/05/25.
 //
 
 import UIKit

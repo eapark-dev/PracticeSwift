@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  I am Rich
+//  I Am Rich
 //
-//  Created by 박은아 on 2022/03/13.
+//  Created by 박은아 on 2022/05/25.
 //
 
 import UIKit
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "I_am_Rich")
+        let container = NSPersistentContainer(name: "I_Am_Rich")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

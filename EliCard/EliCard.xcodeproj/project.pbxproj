@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		569B9CC1283E4E9400D67F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9CC0283E4E9400D67F76 /* AppDelegate.swift */; };
-		569B9CC3283E4E9400D67F76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9CC2283E4E9400D67F76 /* SceneDelegate.swift */; };
-		569B9CC5283E4E9400D67F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9CC4283E4E9400D67F76 /* ViewController.swift */; };
-		569B9CC8283E4E9400D67F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569B9CC6283E4E9400D67F76 /* Main.storyboard */; };
-		569B9CCB283E4E9400D67F76 /* I_Am_Rich.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 569B9CC9283E4E9400D67F76 /* I_Am_Rich.xcdatamodeld */; };
-		569B9CCD283E4E9500D67F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B9CCC283E4E9500D67F76 /* Assets.xcassets */; };
-		569B9CD0283E4E9500D67F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569B9CCE283E4E9500D67F76 /* LaunchScreen.storyboard */; };
+		569B9D26283E503B00D67F76 /* EliCardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9D25283E503B00D67F76 /* EliCardApp.swift */; };
+		569B9D28283E503B00D67F76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B9D27283E503B00D67F76 /* ContentView.swift */; };
+		569B9D2A283E503C00D67F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B9D29283E503C00D67F76 /* Assets.xcassets */; };
+		569B9D2D283E503C00D67F76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569B9D2C283E503C00D67F76 /* Preview Assets.xcassets */; };
+		569B9D35283E537000D67F76 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B9D34283E537000D67F76 /* Pacifico-Regular.ttf */; };
+		569B9D38283E573700D67F76 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B9D37283E573700D67F76 /* Lato-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		569B9CBD283E4E9400D67F76 /* I Am Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I Am Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		569B9CC0283E4E9400D67F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		569B9CC2283E4E9400D67F76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		569B9CC4283E4E9400D67F76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		569B9CC7283E4E9400D67F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		569B9CCA283E4E9400D67F76 /* I_Am_Rich.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = I_Am_Rich.xcdatamodel; sourceTree = "<group>"; };
-		569B9CCC283E4E9500D67F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		569B9CCF283E4E9500D67F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		569B9CD1283E4E9500D67F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		569B9D22283E503B00D67F76 /* EliCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EliCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		569B9D25283E503B00D67F76 /* EliCardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EliCardApp.swift; sourceTree = "<group>"; };
+		569B9D27283E503B00D67F76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		569B9D29283E503C00D67F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		569B9D2C283E503C00D67F76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		569B9D34283E537000D67F76 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		569B9D36283E541D00D67F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		569B9D37283E573700D67F76 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		569B9CBA283E4E9400D67F76 /* Frameworks */ = {
+		569B9D1F283E503B00D67F76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +37,88 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		569B9CB4283E4E9400D67F76 = {
+		569B9D19283E503B00D67F76 = {
 			isa = PBXGroup;
 			children = (
-				569B9CBF283E4E9400D67F76 /* I Am Rich */,
-				569B9CBE283E4E9400D67F76 /* Products */,
+				569B9D24283E503B00D67F76 /* EliCard */,
+				569B9D23283E503B00D67F76 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		569B9CBE283E4E9400D67F76 /* Products */ = {
+		569B9D23283E503B00D67F76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				569B9CBD283E4E9400D67F76 /* I Am Rich.app */,
+				569B9D22283E503B00D67F76 /* EliCard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		569B9CBF283E4E9400D67F76 /* I Am Rich */ = {
+		569B9D24283E503B00D67F76 /* EliCard */ = {
 			isa = PBXGroup;
 			children = (
-				569B9CC0283E4E9400D67F76 /* AppDelegate.swift */,
-				569B9CC2283E4E9400D67F76 /* SceneDelegate.swift */,
-				569B9CC4283E4E9400D67F76 /* ViewController.swift */,
-				569B9CC6283E4E9400D67F76 /* Main.storyboard */,
-				569B9CCC283E4E9500D67F76 /* Assets.xcassets */,
-				569B9CCE283E4E9500D67F76 /* LaunchScreen.storyboard */,
-				569B9CD1283E4E9500D67F76 /* Info.plist */,
-				569B9CC9283E4E9400D67F76 /* I_Am_Rich.xcdatamodeld */,
+				569B9D36283E541D00D67F76 /* Info.plist */,
+				569B9D33283E532600D67F76 /* fonts */,
+				569B9D25283E503B00D67F76 /* EliCardApp.swift */,
+				569B9D27283E503B00D67F76 /* ContentView.swift */,
+				569B9D29283E503C00D67F76 /* Assets.xcassets */,
+				569B9D2B283E503C00D67F76 /* Preview Content */,
 			);
-			path = "I Am Rich";
+			path = EliCard;
+			sourceTree = "<group>";
+		};
+		569B9D2B283E503C00D67F76 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				569B9D2C283E503C00D67F76 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		569B9D33283E532600D67F76 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				569B9D37283E573700D67F76 /* Lato-Black.ttf */,
+				569B9D34283E537000D67F76 /* Pacifico-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		569B9CBC283E4E9400D67F76 /* I Am Rich */ = {
+		569B9D21283E503B00D67F76 /* EliCard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 569B9CD4283E4E9500D67F76 /* Build configuration list for PBXNativeTarget "I Am Rich" */;
+			buildConfigurationList = 569B9D30283E503C00D67F76 /* Build configuration list for PBXNativeTarget "EliCard" */;
 			buildPhases = (
-				569B9CB9283E4E9400D67F76 /* Sources */,
-				569B9CBA283E4E9400D67F76 /* Frameworks */,
-				569B9CBB283E4E9400D67F76 /* Resources */,
+				569B9D1E283E503B00D67F76 /* Sources */,
+				569B9D1F283E503B00D67F76 /* Frameworks */,
+				569B9D20283E503B00D67F76 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "I Am Rich";
-			productName = "I Am Rich";
-			productReference = 569B9CBD283E4E9400D67F76 /* I Am Rich.app */;
+			name = EliCard;
+			productName = EliCard;
+			productReference = 569B9D22283E503B00D67F76 /* EliCard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		569B9CB5283E4E9400D67F76 /* Project object */ = {
+		569B9D1A283E503B00D67F76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					569B9CBC283E4E9400D67F76 = {
+					569B9D21283E503B00D67F76 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 569B9CB8283E4E9400D67F76 /* Build configuration list for PBXProject "I Am Rich" */;
+			buildConfigurationList = 569B9D1D283E503B00D67F76 /* Build configuration list for PBXProject "EliCard" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,64 +126,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 569B9CB4283E4E9400D67F76;
-			productRefGroup = 569B9CBE283E4E9400D67F76 /* Products */;
+			mainGroup = 569B9D19283E503B00D67F76;
+			productRefGroup = 569B9D23283E503B00D67F76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				569B9CBC283E4E9400D67F76 /* I Am Rich */,
+				569B9D21283E503B00D67F76 /* EliCard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		569B9CBB283E4E9400D67F76 /* Resources */ = {
+		569B9D20283E503B00D67F76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569B9CD0283E4E9500D67F76 /* LaunchScreen.storyboard in Resources */,
-				569B9CCD283E4E9500D67F76 /* Assets.xcassets in Resources */,
-				569B9CC8283E4E9400D67F76 /* Main.storyboard in Resources */,
+				569B9D38283E573700D67F76 /* Lato-Black.ttf in Resources */,
+				569B9D35283E537000D67F76 /* Pacifico-Regular.ttf in Resources */,
+				569B9D2D283E503C00D67F76 /* Preview Assets.xcassets in Resources */,
+				569B9D2A283E503C00D67F76 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		569B9CB9283E4E9400D67F76 /* Sources */ = {
+		569B9D1E283E503B00D67F76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569B9CC5283E4E9400D67F76 /* ViewController.swift in Sources */,
-				569B9CCB283E4E9400D67F76 /* I_Am_Rich.xcdatamodeld in Sources */,
-				569B9CC1283E4E9400D67F76 /* AppDelegate.swift in Sources */,
-				569B9CC3283E4E9400D67F76 /* SceneDelegate.swift in Sources */,
+				569B9D28283E503B00D67F76 /* ContentView.swift in Sources */,
+				569B9D26283E503B00D67F76 /* EliCardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		569B9CC6283E4E9400D67F76 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				569B9CC7283E4E9400D67F76 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		569B9CCE283E4E9500D67F76 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				569B9CCF283E4E9500D67F76 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		569B9CD2283E4E9500D67F76 /* Debug */ = {
+		569B9D2E283E503C00D67F76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		569B9CD3283E4E9500D67F76 /* Release */ = {
+		569B9D2F283E503C00D67F76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,19 +277,21 @@
 			};
 			name = Release;
 		};
-		569B9CD5283E4E9500D67F76 /* Debug */ = {
+		569B9D31283E503C00D67F76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EliCard/Preview Content\"";
 				DEVELOPMENT_TEAM = DHQ24A996D;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "I Am Rich/Info.plist";
+				INFOPLIST_FILE = EliCard/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +299,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eunapark.I-Am-Rich";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eunapark.EliCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,19 +307,21 @@
 			};
 			name = Debug;
 		};
-		569B9CD6283E4E9500D67F76 /* Release */ = {
+		569B9D32283E503C00D67F76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EliCard/Preview Content\"";
 				DEVELOPMENT_TEAM = DHQ24A996D;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "I Am Rich/Info.plist";
+				INFOPLIST_FILE = EliCard/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eunapark.I-Am-Rich";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eunapark.EliCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -343,38 +340,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		569B9CB8283E4E9400D67F76 /* Build configuration list for PBXProject "I Am Rich" */ = {
+		569B9D1D283E503B00D67F76 /* Build configuration list for PBXProject "EliCard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				569B9CD2283E4E9500D67F76 /* Debug */,
-				569B9CD3283E4E9500D67F76 /* Release */,
+				569B9D2E283E503C00D67F76 /* Debug */,
+				569B9D2F283E503C00D67F76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		569B9CD4283E4E9500D67F76 /* Build configuration list for PBXNativeTarget "I Am Rich" */ = {
+		569B9D30283E503C00D67F76 /* Build configuration list for PBXNativeTarget "EliCard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				569B9CD5283E4E9500D67F76 /* Debug */,
-				569B9CD6283E4E9500D67F76 /* Release */,
+				569B9D31283E503C00D67F76 /* Debug */,
+				569B9D32283E503C00D67F76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		569B9CC9283E4E9400D67F76 /* I_Am_Rich.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				569B9CCA283E4E9400D67F76 /* I_Am_Rich.xcdatamodel */,
-			);
-			currentVersion = 569B9CCA283E4E9400D67F76 /* I_Am_Rich.xcdatamodel */;
-			path = I_Am_Rich.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 569B9CB5283E4E9400D67F76 /* Project object */;
+	rootObject = 569B9D1A283E503B00D67F76 /* Project object */;
 }
