@@ -27,10 +27,9 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .font(.system(size: 20))
                 Divider()
-                RoundedRectangle(cornerRadius: 25)
-                    .fill(Color.white)
-                    .frame(height: 35)
-                    .overlay(Text("eapark5908@gmail.com"))
+                InforView(text: "eapark5908@gmail.com", imageName: "mail")
+                InforView(text: "https://eunapark.tistory.com", imageName: "link.circle.fill")
+                InforView(text: "https://github.com/eapark-dev", imageName: "link.circle.fill")
             }
         }
     }
@@ -41,3 +40,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
