@@ -15,6 +15,7 @@
 		56B6A74B284F8689003434C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B6A749284F8689003434C0 /* LaunchScreen.storyboard */; };
 		56B6A756284F8741003434C0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A754284F8741003434C0 /* DetailViewController.swift */; };
 		56B6A757284F8741003434C0 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B6A755284F8741003434C0 /* DetailViewController.xib */; };
+		56C4BE0A28522BE000FCDA5D /* SeguDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C4BE0928522BE000FCDA5D /* SeguDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		56B6A74C284F8689003434C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56B6A754284F8741003434C0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		56B6A755284F8741003434C0 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		56C4BE0928522BE000FCDA5D /* SeguDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				56B6A73E284F8687003434C0 /* AppDelegate.swift */,
 				56B6A740284F8687003434C0 /* SceneDelegate.swift */,
 				56B6A742284F8687003434C0 /* ViewController.swift */,
+				56C4BE0928522BE000FCDA5D /* SeguDetailViewController.swift */,
 				56B6A744284F8687003434C0 /* Main.storyboard */,
 				56B6A747284F8689003434C0 /* Assets.xcassets */,
 				56B6A749284F8689003434C0 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B6A743284F8687003434C0 /* ViewController.swift in Sources */,
+				56C4BE0A28522BE000FCDA5D /* SeguDetailViewController.swift in Sources */,
 				56B6A73F284F8687003434C0 /* AppDelegate.swift in Sources */,
 				56B6A741284F8687003434C0 /* SceneDelegate.swift in Sources */,
 				56B6A756284F8741003434C0 /* DetailViewController.swift in Sources */,
