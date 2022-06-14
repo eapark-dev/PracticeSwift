@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var dataLabel: UILabel!
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sugueDetail" {
             //화살표가 연결된 목적지
@@ -42,4 +44,11 @@ class ViewController: UIViewController {
    
     }
     
+    @IBAction func moveToInstance(_ sender: UIButton) {
+        let detailVC = InstanceDetailViewController(nibName: "InstanceDetailViewController", bundle: nil)
+        
+        detailVC.mainVC = self
+        
+        self.present(detailVC, animated: true, completion: nil)
+    }
 }

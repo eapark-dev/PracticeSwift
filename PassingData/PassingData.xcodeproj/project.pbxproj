@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56069D2C2858BD82007BCFBC /* InstanceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56069D2A2858BD82007BCFBC /* InstanceDetailViewController.swift */; };
+		56069D2D2858BD82007BCFBC /* InstanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56069D2B2858BD82007BCFBC /* InstanceDetailViewController.xib */; };
 		56B6A73F284F8687003434C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A73E284F8687003434C0 /* AppDelegate.swift */; };
 		56B6A741284F8687003434C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A740284F8687003434C0 /* SceneDelegate.swift */; };
 		56B6A743284F8687003434C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A742284F8687003434C0 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56069D2A2858BD82007BCFBC /* InstanceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailViewController.swift; sourceTree = "<group>"; };
+		56069D2B2858BD82007BCFBC /* InstanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstanceDetailViewController.xib; sourceTree = "<group>"; };
 		56B6A73B284F8687003434C0 /* PassingData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassingData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B6A73E284F8687003434C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B6A740284F8687003434C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				56B6A74C284F8689003434C0 /* Info.plist */,
 				56B6A754284F8741003434C0 /* DetailViewController.swift */,
 				56B6A755284F8741003434C0 /* DetailViewController.xib */,
+				56069D2A2858BD82007BCFBC /* InstanceDetailViewController.swift */,
+				56069D2B2858BD82007BCFBC /* InstanceDetailViewController.xib */,
 			);
 			path = PassingData;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				56B6A74B284F8689003434C0 /* LaunchScreen.storyboard in Resources */,
 				56B6A748284F8689003434C0 /* Assets.xcassets in Resources */,
 				56B6A746284F8687003434C0 /* Main.storyboard in Resources */,
+				56069D2D2858BD82007BCFBC /* InstanceDetailViewController.xib in Resources */,
 				56B6A757284F8741003434C0 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +159,7 @@
 				56C4BE0A28522BE000FCDA5D /* SeguDetailViewController.swift in Sources */,
 				56B6A73F284F8687003434C0 /* AppDelegate.swift in Sources */,
 				56B6A741284F8687003434C0 /* SceneDelegate.swift in Sources */,
+				56069D2C2858BD82007BCFBC /* InstanceDetailViewController.swift in Sources */,
 				56B6A756284F8741003434C0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
