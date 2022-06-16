@@ -9,6 +9,7 @@ import UIKit
 
 class InstanceDetailViewController: UIViewController {
 
+    //나 자신에 대한 instance를 넘김
     var mainVC: ViewController?
     
     override func viewDidLoad() {

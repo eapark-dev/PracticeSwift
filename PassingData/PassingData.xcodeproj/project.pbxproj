@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		56069D2C2858BD82007BCFBC /* InstanceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56069D2A2858BD82007BCFBC /* InstanceDetailViewController.swift */; };
 		56069D2D2858BD82007BCFBC /* InstanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56069D2B2858BD82007BCFBC /* InstanceDetailViewController.xib */; };
+		56069D302858C033007BCFBC /* DelegateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56069D2E2858C033007BCFBC /* DelegateDetailViewController.swift */; };
+		56069D312858C033007BCFBC /* DelegateDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56069D2F2858C033007BCFBC /* DelegateDetailViewController.xib */; };
+		56069D34285B551F007BCFBC /* ClosureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56069D32285B551F007BCFBC /* ClosureDetailViewController.swift */; };
+		56069D35285B551F007BCFBC /* ClosureDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56069D33285B551F007BCFBC /* ClosureDetailViewController.xib */; };
+		56069D38285B5C6E007BCFBC /* NotiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56069D36285B5C6E007BCFBC /* NotiDetailViewController.swift */; };
+		56069D39285B5C6E007BCFBC /* NotiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56069D37285B5C6E007BCFBC /* NotiDetailViewController.xib */; };
 		56B6A73F284F8687003434C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A73E284F8687003434C0 /* AppDelegate.swift */; };
 		56B6A741284F8687003434C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A740284F8687003434C0 /* SceneDelegate.swift */; };
 		56B6A743284F8687003434C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B6A742284F8687003434C0 /* ViewController.swift */; };
@@ -23,6 +29,12 @@
 /* Begin PBXFileReference section */
 		56069D2A2858BD82007BCFBC /* InstanceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailViewController.swift; sourceTree = "<group>"; };
 		56069D2B2858BD82007BCFBC /* InstanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstanceDetailViewController.xib; sourceTree = "<group>"; };
+		56069D2E2858C033007BCFBC /* DelegateDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateDetailViewController.swift; sourceTree = "<group>"; };
+		56069D2F2858C033007BCFBC /* DelegateDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DelegateDetailViewController.xib; sourceTree = "<group>"; };
+		56069D32285B551F007BCFBC /* ClosureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureDetailViewController.swift; sourceTree = "<group>"; };
+		56069D33285B551F007BCFBC /* ClosureDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosureDetailViewController.xib; sourceTree = "<group>"; };
+		56069D36285B5C6E007BCFBC /* NotiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDetailViewController.swift; sourceTree = "<group>"; };
+		56069D37285B5C6E007BCFBC /* NotiDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotiDetailViewController.xib; sourceTree = "<group>"; };
 		56B6A73B284F8687003434C0 /* PassingData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassingData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B6A73E284F8687003434C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B6A740284F8687003434C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +90,12 @@
 				56B6A755284F8741003434C0 /* DetailViewController.xib */,
 				56069D2A2858BD82007BCFBC /* InstanceDetailViewController.swift */,
 				56069D2B2858BD82007BCFBC /* InstanceDetailViewController.xib */,
+				56069D2E2858C033007BCFBC /* DelegateDetailViewController.swift */,
+				56069D2F2858C033007BCFBC /* DelegateDetailViewController.xib */,
+				56069D32285B551F007BCFBC /* ClosureDetailViewController.swift */,
+				56069D33285B551F007BCFBC /* ClosureDetailViewController.xib */,
+				56069D36285B5C6E007BCFBC /* NotiDetailViewController.swift */,
+				56069D37285B5C6E007BCFBC /* NotiDetailViewController.xib */,
 			);
 			path = PassingData;
 			sourceTree = "<group>";
@@ -140,6 +158,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56069D35285B551F007BCFBC /* ClosureDetailViewController.xib in Resources */,
+				56069D39285B5C6E007BCFBC /* NotiDetailViewController.xib in Resources */,
+				56069D312858C033007BCFBC /* DelegateDetailViewController.xib in Resources */,
 				56B6A74B284F8689003434C0 /* LaunchScreen.storyboard in Resources */,
 				56B6A748284F8689003434C0 /* Assets.xcassets in Resources */,
 				56B6A746284F8687003434C0 /* Main.storyboard in Resources */,
@@ -156,8 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B6A743284F8687003434C0 /* ViewController.swift in Sources */,
+				56069D34285B551F007BCFBC /* ClosureDetailViewController.swift in Sources */,
+				56069D302858C033007BCFBC /* DelegateDetailViewController.swift in Sources */,
 				56C4BE0A28522BE000FCDA5D /* SeguDetailViewController.swift in Sources */,
 				56B6A73F284F8687003434C0 /* AppDelegate.swift in Sources */,
+				56069D38285B5C6E007BCFBC /* NotiDetailViewController.swift in Sources */,
 				56B6A741284F8687003434C0 /* SceneDelegate.swift in Sources */,
 				56069D2C2858BD82007BCFBC /* InstanceDetailViewController.swift in Sources */,
 				56B6A756284F8741003434C0 /* DetailViewController.swift in Sources */,
