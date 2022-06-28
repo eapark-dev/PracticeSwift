@@ -25,7 +25,7 @@ class InstanceDetailViewController: UIViewController {
     
     /*
     // MARK: - Navigation
-
+     #imageLiteral(resourceName: "simulator_screenshot_92E24506-DF05-4188-9732-CA96D1B838C7.png")
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
